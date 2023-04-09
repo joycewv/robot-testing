@@ -3,13 +3,13 @@ Documentation        This is some basic info about the whole suite
 Library              SeleniumLibrary
 
 #Run the script
-#robot -d Results Tests/crm.robot
+#robot -d Results tests/portfolio-site.robot
 
 
 *** Variables ***
 
 *** Test Cases ***
-Should be able to add new customer
+Able to open website successfully
     [Documentation]            This is some basic info about the test 
     [Tags]                     Robot testing contact section
     #Initiolize Selenium
@@ -21,6 +21,8 @@ Should be able to add new customer
 
     Sleep    3s
 
+Navigate to Contact Section
+
     Page Should Contain        Front-End Developer
 
     Sleep    3s
@@ -29,18 +31,17 @@ Should be able to add new customer
     Click Link                 Contact
     Sleep    3s
 
-
+Should be able to fill the form and submit
     Page Should Contain        Fill up the form to keep in touch
 
     Input Text                 id=firstName      robot
-    Input Text                 id=email      email-placeholder@gmail.com
-    Input Text                 id=comment      First robot testing, more than 25 characters
+    Input Text                 id=email      email placeholder
+    Input Text                 id=comment      2nd robot testing, more than 25 characters and more
     Click Button               Send
     
 
-
-    Sleep                      4s
+Close the browser
+    Sleep                      3s
     Close Browser
     
-
 *** Keywords ***
