@@ -33,7 +33,7 @@ Should be able to add new customer
     Page Should Contain        Fill up the form to keep in touch
 
     Input Text                 id=firstName      robot
-    Input Text                 id=email      joyce.wv2022@gmail.com
+    Input Text                 id=email      email-placeholder@gmail.com
     Input Text                 id=comment      First robot testing, more than 25 characters
     Click Button               Send
     
